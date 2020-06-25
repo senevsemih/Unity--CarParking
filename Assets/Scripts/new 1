@@ -1,0 +1,22 @@
+public static class PoissonDiscSampling{
+	public static List<Vector2> GeneratePoints(float radious, Vector2 sampleRegionSize, int numSamplesBeforeRejection = 30){
+		float cellSize = radious/Mathf.Sqrt(2);
+		
+		int[, ] grid = new int[Mathf.CeilToInt(sampleRegionSize.x / cellSize), Mathf.CeilToInt(sampleRegionSize.y / cellSize)];
+		List<Vector2> points = new List<Vector2>();
+		List<Vector2> spawnPoints = new List<Vector2>();
+		
+		spawnPoints.Add(sampleRegionSize / 2);
+		while(spawnPoints.Count > 0){
+			int spawnIndex = Random.Range(0, spawnPoints.Count);
+			Vector2 spawnCenter = spawnPoints[spawnIndex];
+			
+			for(int i = 0; i < numSamplesBeforeRejection; i++){
+				
+			}
+		}
+		
+		
+	}
+
+}
